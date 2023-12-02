@@ -41,19 +41,14 @@ func getGamesByLimit(games []Game, red int, green int, blue int) []Game {
 	var possibleGames []Game
 
 	for _, game := range games {
-		var gameRed, gameGreen, gameBlue int
 		var isPossible = true
 
 		for _, set := range game.Sets {
-			gameRed += set.Red
-			gameGreen += set.Green
-			gameBlue += set.Blue
 
 			if set.Red > red || set.Green > green || set.Blue > blue {
 				isPossible = false
 				break
 			}
-
 		}
 
 		if isPossible {

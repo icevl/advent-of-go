@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"log"
 	"os"
 	"regexp"
@@ -30,22 +29,9 @@ func main() {
 	log.Println("Part 2:", p2)
 }
 
-func loadInput() ([]string, error) {
-	var input []string
-
-	file, err := os.Open("input.txt")
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		input = append(input, scanner.Text())
-	}
-
-	return input, scanner.Err()
-
+func loadInput() []string {
+	input, _ := os.ReadFile("input.txt")
+	return strings.Split(string(input), "\n")
 }
 
 func extractValue(input string, replaceWords bool) int {
