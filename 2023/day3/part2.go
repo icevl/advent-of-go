@@ -30,13 +30,12 @@ func part2(schematic Schematic) int {
 
 func parseNumbersFromLine(line string, y int) []Number {
 	numbers := make([]Number, 0)
-	X := len(line)
 
-	for x := 0; x < X; x++ {
+	for x := 0; x < len(line); x++ {
 		start := x
 		current := 0
 
-		for ; x < X && isDigit(line[x]); x++ {
+		for ; x < len(line) && isDigit(line[x]); x++ {
 			current = current*10 + int(line[x]-'0')
 		}
 

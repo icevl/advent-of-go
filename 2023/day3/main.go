@@ -13,7 +13,6 @@ func main() {
 
 	log.Println("Part 1:", part1(schematic))
 	log.Println("Part 2:", part2(schematic))
-
 }
 
 func loadSchematic(file string) Schematic {
