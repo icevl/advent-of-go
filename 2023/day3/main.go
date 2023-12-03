@@ -9,11 +9,10 @@ import (
 type Schematic [][]rune
 
 func main() {
-
-	// grid := loadSchematic("input_test.txt")
 	schematic := loadSchematic("input.txt")
 
-	log.Println(part2(schematic))
+	log.Println("Part 1:", part1(schematic))
+	log.Println("Part 2:", part2(schematic))
 
 }
 
