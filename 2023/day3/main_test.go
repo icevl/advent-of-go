@@ -22,7 +22,6 @@ func TestPart2(t *testing.T) {
 }
 
 func Benchmark_Part1(b *testing.B) {
-
 	for n := 0; n < b.N; n++ {
 		schematic := loadSchematic("input.txt")
 		Part1(schematic)
