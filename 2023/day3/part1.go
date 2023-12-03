@@ -7,7 +7,7 @@ import (
 
 const EMPTY_SYMBOL = '.'
 
-func part1(schematic Schematic) int {
+func Part1(schematic Schematic) int {
 	sum := 0
 
 	for y := range schematic {

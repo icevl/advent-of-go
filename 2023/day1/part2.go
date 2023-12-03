@@ -1,6 +1,6 @@
 package main
 
-func part2() int {
+func Part2() int {
 	var sum int
 
 	input := loadInput()

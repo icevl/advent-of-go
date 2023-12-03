@@ -33,8 +33,8 @@ func (g *Game) getPower() int {
 }
 
 func main() {
-	log.Println("Part 1:", part1())
-	log.Println("Part 2:", part2())
+	log.Println("Part 1:", Part1())
+	log.Println("Part 2:", Part2())
 }
 
 func getGamesByLimit(games []Game, red int, green int, blue int) []Game {

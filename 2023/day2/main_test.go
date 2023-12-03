@@ -40,9 +40,9 @@ func TestPowerCalculation(t *testing.T) {
 }
 
 func TestPart1(t *testing.T) {
-	assert.Equal(t, part1(), 2913)
+	assert.Equal(t, Part1(), 2913)
 }
 
 func TestPart2(t *testing.T) {
-	assert.Equal(t, part2(), 55593)
+	assert.Equal(t, Part2(), 55593)
 }

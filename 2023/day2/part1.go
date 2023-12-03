@@ -1,6 +1,6 @@
 package main
 
-func part1() int {
+func Part1() int {
 	games := loadGames()
 
 	var sum int

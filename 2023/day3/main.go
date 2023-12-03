@@ -11,8 +11,8 @@ type Schematic [][]rune
 func main() {
 	schematic := loadSchematic("input.txt")
 
-	log.Println("Part 1:", part1(schematic))
-	log.Println("Part 2:", part2(schematic))
+	log.Println("Part 1:", Part1(schematic))
+	log.Println("Part 2:", Part2(schematic))
 }
 
 func loadSchematic(file string) Schematic {

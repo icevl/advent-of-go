@@ -22,11 +22,8 @@ var NUMBERS = map[string]int{
 }
 
 func main() {
-	p1 := part1()
-	p2 := part2()
-
-	log.Println("Part 1:", p1)
-	log.Println("Part 2:", p2)
+	log.Println("Part 1:", Part1())
+	log.Println("Part 2:", Part2())
 }
 
 func loadInput() []string {

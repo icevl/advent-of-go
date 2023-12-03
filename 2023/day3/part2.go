@@ -9,7 +9,7 @@ type Number struct {
 	value int
 }
 
-func part2(schematic Schematic) int {
+func Part2(schematic Schematic) int {
 	sum := 0
 	allNumbers := make([]Number, 0)
 
