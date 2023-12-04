@@ -29,3 +29,15 @@ func TestPart1(t *testing.T) {
 func TestPart2(t *testing.T) {
 	assert.Equal(t, Part2(), 5422730)
 }
+
+func Benchmark_Part1(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Part1()
+	}
+}
+
+func Benchmark_Part2(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Part2()
+	}
+}
