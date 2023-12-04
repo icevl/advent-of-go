@@ -14,9 +14,9 @@ func Part2() int {
 			continue
 		}
 
-		for j := 0; j < deck[card.id]; j++ {
-			for i := card.id + 1; i <= card.id+len(card.matched); i++ {
-				deck[i] += 1
+		for d := 0; d < deck[card.id]; d++ {
+			for j := card.id + 1; j <= card.id+len(card.matched); j++ {
+				deck[j] += 1
 			}
 		}
 
