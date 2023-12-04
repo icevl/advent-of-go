@@ -16,6 +16,16 @@ type Card struct {
 	matched    []int
 }
 
+func (c *Card) GetPoints() int {
+	matchedCount := len(c.matched)
+
+	if matchedCount == 0 {
+		return 0
+	}
+
+	return 1 << (matchedCount - 1)
+}
+
 func main() {
 	log.Println("Part 1:", Part1())
 	log.Println("Part 2:", Part2())
@@ -38,8 +48,8 @@ func loadCards(file string) []Card {
 
 func extractCard(line string) (*Card, bool) {
 	re := regexp.MustCompile(`Card\s+(\d+):\s+(.*)\s+\|\s+(.*)`)
-
 	matches := re.FindStringSubmatch(line)
+
 	if len(matches) < 3 {
 		return nil, false
 	}
@@ -76,14 +86,4 @@ func extractNumbers(line string) []int {
 	}
 
 	return numbers
-}
-
-func (c *Card) GetPoints() int {
-	matchedCount := len(c.matched)
-
-	if matchedCount == 0 {
-		return 0
-	}
-
-	return 1 << (matchedCount - 1)
 }
