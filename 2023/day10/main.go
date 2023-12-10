@@ -24,7 +24,7 @@ type Position struct {
 
 func main() {
 
-	part1, err1 := part1()
+	p1, err1 := part1()
 
 	if err1 != nil {
 		log.Fatal(err1)
@@ -36,7 +36,7 @@ func main() {
 		log.Fatal(err2)
 	}
 
-	log.Println("Part1:", part1)
+	log.Println("Part1:", p1)
 	log.Println("Part2:", p2)
 }
 
